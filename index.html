@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>tyu</title>
+<title>私人应用</title>
 <style>
 /* ========== 核心变量 ========== */
 :root{
@@ -1164,7 +1164,7 @@ textarea{width:100%;height:120px;margin-top:10px;padding:10px;font-family:var(--
         <div id="quote-preview"><span id="quote-text"></span><span onclick="Chat.cancelQuote()" style="cursor:pointer;">✕</span></div>
         <div class="input-row">
             <div class="plus-btn" onclick="document.getElementById('plus-panel').classList.toggle('show')">+</div>
-            <input type="text" id="chat-input" placeholder="输入消息..." onkeypress="if(event.key==='Enter') Chat.send()">
+            <input type="text" id="chat-input" placeholder="输入消息..." onkeypress="if(event.key==='Enter') Chat.send()" ondblclick="Chat.forceOtherMessage()">
             <button class="btn" onclick="Chat.send()">发送</button>
         </div>
     </div>
@@ -1727,7 +1727,7 @@ const Data = {
         return {
             messages: [], avatars: { me: "", other: "" },
             cards: JSON.parse(JSON.stringify(defaultCards)),
-            emojis: [], emojiTexts: [], pats: [], // 拍一拍默认为空
+            emojis: [], emojiTexts: [], pats: [],
             mails: { unread: [], sent: [], received: [] },
             polaroidJournalImage: "",
             flightData: { fromCode: 'JFK', fromCity: 'New York', toCode: 'LHR', toCity: 'London', date: 'May 24,2026', time: '08:45 AM', seat: '12A' },
@@ -2727,7 +2727,7 @@ const Settings = { save() {
 const Mailbox = {
     generateLetterContent() {
         try {
-            if (!Data.db.cards || Data.db.cards.length === 0) return;
+            if (!Data.db.cards || Data.db.cards.length === 0) return "我今天很想你，但字卡库空空的，不知道说什么好。";
             const count = Math.floor(Math.random() * 3) + 8; let parts = [];
             for (let i = 0; i < count; i++) {
                 const card = Data.db.cards[Math.floor(Math.random() * Data.db.cards.length)];
@@ -3475,8 +3475,10 @@ const Chat = {
     },
     scheduleProactiveMessage() {
         if (this.proactiveTimer) clearTimeout(this.proactiveTimer);
-        // 随机在 20s - 40s 之间触发
-        const delay = Math.random() * 20000 + 20000;
+        // 修改为 1.5分钟到3分钟之间触发 (90,000ms ~ 180,000ms)
+        const minDelay = 90 * 1000;
+        const maxDelay = 180 * 1000;
+        const delay = Math.random() * (maxDelay - minDelay) + minDelay;
         this.proactiveTimer = setTimeout(() => {
             this.triggerProactiveMsg();
             this.scheduleProactiveMessage();
@@ -3502,6 +3504,14 @@ const Chat = {
                 notif.classList.remove('show');
             }, 3000);
         }
+    },
+    // 双击发送输入框，强制对方主动发消息（可立即触发一次）
+    forceOtherMessage() {
+        if (!Data.db.cards || Data.db.cards.length === 0) return;
+        this.triggerProactiveMsg(); // 直接触发
+        // 为了让“对方”看起来像是主动发的，可以稍微延迟一点，但立即触发也行
+        // 这里为了体验，我们直接调用 triggerProactiveMsg，它会加入消息并渲染
+        // 但 triggerProactiveMsg 内部已经调用了 this.render()，所以没问题
     },
     showMenu(e, c, img, idx) {
         try {
