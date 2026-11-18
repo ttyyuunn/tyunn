@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>私人应用</title>
+<title>tyu</title>
 <style>
 /* ========== 核心变量 ========== */
 :root{
@@ -579,48 +579,6 @@ textarea{width:100%;height:120px;margin-top:10px;padding:10px;font-family:var(--
 .uno-deck { width: 60px; height: 90px; background: #111; border: 2px solid #555; border-radius: 8px; display: flex; justify-content: center; align-items: center; font-size: 20px; cursor: pointer; }
 .uno-current-card { font-size: 40px; font-weight: bold; border-radius: 12px; display: flex; justify-content: center; align-items: center; box-shadow: 0 0 20px rgba(255,255,255,0.2); }
 
-/* ========== 骗子酒馆 ========== */
-.liar-container { flex:1; display:flex; flex-direction:column; padding:15px; gap:12px; overflow-y:auto; background:linear-gradient(180deg,#1c1410 0%,#241a12 100%); color:#e8d5b5; }
-.liar-bar-header { display:flex; justify-content:space-between; align-items:center; font-size:13px; color:#c9a86a; }
-.liar-round-tag { background:rgba(201,168,106,0.15); border:1px solid rgba(201,168,106,0.4); border-radius:999px; padding:3px 12px; font-size:12px; }
-.liar-table-card { align-self:center; background:rgba(201,168,106,0.12); border:1px dashed rgba(201,168,106,0.5); border-radius:12px; padding:10px 24px; text-align:center; }
-.liar-table-card .t-label { font-size:11px; color:#a5854e; margin-bottom:4px; }
-.liar-table-card .t-value { font-size:26px; font-weight:800; color:#f0d9a8; letter-spacing:2px; }
-.liar-status { align-self:center; text-align:center; font-size:14px; font-weight:bold; min-height:20px; color:#f0d9a8; }
-.liar-facezone { display:flex; flex-wrap:wrap; gap:6px; justify-content:center; min-height:60px; align-items:center; padding:8px; border-radius:10px; background:rgba(0,0,0,0.25); }
-.liar-facezone .zone-tag { font-size:11px; color:#8a7350; position:absolute; }
-.liar-card-back { width:42px; height:60px; border-radius:6px; background:linear-gradient(135deg,#7a1f1f,#4a1010); border:1px solid #a54444; box-shadow:2px 2px 6px rgba(0,0,0,0.6); display:flex; justify-content:center; align-items:center; font-size:16px; color:#e0b0b0; }
-.liar-card-back.revealed { background:linear-gradient(135deg,#f5ecd7,#e0d0a8); border-color:#8a7350; color:#333; font-weight:bold; font-size:18px; }
-.liar-revolver { align-self:center; display:flex; gap:8px; align-items:center; background:rgba(0,0,0,0.3); border-radius:999px; padding:8px 16px; }
-.liar-revolver .rev-label { font-size:12px; color:#c9a86a; margin-right:4px; }
-.liar-chamber { width:12px; height:12px; border-radius:50%; border:1px solid #c9a86a; background:transparent; }
-.liar-chamber.used { background:#6b4a2a; border-color:#6b4a2a; }
-.liar-chamber.deadly { background:#ff3b30; border-color:#ff3b30; box-shadow:0 0 8px rgba(255,59,48,0.8); animation:liar-pulse 1s infinite; }
-@keyframes liar-pulse { 0%,100%{opacity:1;} 50%{opacity:0.4;} }
-.liar-hand-title { font-size:12px; color:#8a7350; }
-.liar-hand { display:flex; gap:8px; overflow-x:auto; justify-content:center; min-height:92px; padding:5px 0; }
-.liar-my-card { min-width:56px; width:56px; height:82px; border-radius:8px; background:linear-gradient(135deg,#f5ecd7,#e6d5ae); border:2px solid #8a7350; color:#333; display:flex; flex-direction:column; justify-content:center; align-items:center; font-weight:800; font-size:22px; cursor:pointer; box-shadow:2px 2px 8px rgba(0,0,0,0.6); transition:transform 0.15s, border-color 0.15s; flex-shrink:0; }
-.liar-my-card small { font-size:10px; font-weight:400; color:#8a7350; }
-.liar-my-card.joker { background:linear-gradient(135deg,#3a3a3a,#111); color:#ffd700; border-color:#ffd700; }
-.liar-my-card.selected { transform:translateY(-12px); border-color:#ffd700; box-shadow:0 6px 14px rgba(255,215,0,0.35); }
-.liar-actions { display:flex; gap:12px; justify-content:center; }
-.liar-btn { flex:1; max-width:160px; padding:12px; border-radius:10px; font-size:14px; font-weight:bold; text-align:center; cursor:pointer; border:none; color:#fff; }
-.liar-btn.play { background:linear-gradient(135deg,#c9a86a,#a5854e); color:#1c1410; }
-.liar-btn.challenge { background:linear-gradient(135deg,#a52525,#6e1414); }
-.liar-btn:disabled { opacity:0.35; cursor:not-allowed; }
-.liar-log { font-size:12px; color:#a5854e; text-align:center; min-height:16px; }
-
-/* ========== 桌面自定义图标 ========== */
-.app-icon img.icon-custom { width:54px; height:54px; border-radius:14px; object-fit:cover; margin-bottom:8px; display:block; background:rgba(255,255,255,0.85); }
-.icon-row { display:flex; align-items:center; gap:12px; padding:10px 0; border-bottom:1px solid var(--line); }
-.icon-row:last-child { border-bottom:none; }
-.icon-row .icon-preview { width:44px; height:44px; border-radius:10px; background:var(--bg); display:flex; justify-content:center; align-items:center; overflow:hidden; flex-shrink:0; }
-.icon-row .icon-preview svg { width:28px; height:28px; fill:var(--text); }
-.icon-row .icon-preview img { width:100%; height:100%; object-fit:cover; }
-.icon-row .icon-name { flex:1; font-size:14px; color:var(--text); }
-.icon-row .icon-ops { display:flex; gap:8px; }
-.icon-mini-btn { font-size:12px; padding:6px 12px; border-radius:8px; border:1px solid var(--text); background:transparent; color:var(--text); cursor:pointer; }
-
 </style>
 <style id="custom-bubble-css"></style>
 </head>
@@ -683,14 +641,14 @@ textarea{width:100%;height:120px;margin-top:10px;padding:10px;font-family:var(--
             </div>
 
             <div id="desktop">
-                <div class="app-icon" data-app="chat" onclick="App.open('chat')"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg><span>对话</span></div>
-                <div class="app-icon" data-app="cards" onclick="App.open('cards')"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg><span>字卡库</span></div>
-                <div class="app-icon" data-app="mailbox" onclick="App.open('mailbox')"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg><span>信箱</span></div>
-                <div class="app-icon" data-app="space" onclick="App.open('space')"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg><span>空间</span></div>
-                <div class="app-icon" data-app="music" onclick="App.open('music')"><svg viewBox="0 0 24 24" style="fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round;"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg><span>网易云</span></div>
-                <div class="app-icon" data-app="games" onclick="App.open('games')"><svg viewBox="0 0 24 24"><path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4-3c-.83 0-1.5-.67-1.5-1.5S18.67 9 19.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg><span>小游戏</span></div>
-                <div class="app-icon" data-app="beauty" onclick="App.open('beauty')"><svg viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zm0 16c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7zm1-11h-2v3H8v2h3v3h2v-3h3v-2h-3V8z"/></svg><span>美化</span></div>
-                <div class="app-icon" data-app="settings" onclick="App.open('settings')"><svg viewBox="0 0 24 24"><path d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.06-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61 l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41 h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.59,8.12,5.92,7.63,6.29L5.24,5.33c-0.22-0.08-0.47,0-0.59,0.22L2.73,8.87 C2.62,9.08,2.66,9.34,2.86,9.48l2.03,1.58C4.84,11.36,4.8,11.69,4.8,12s0.02,0.64,0.06,0.94l-2.03,1.58 c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54 c0.05,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96 c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.49-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6 s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z"/></svg><span>系统设置</span></div>
+                <div class="app-icon" onclick="App.open('chat')"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg><span>对话</span></div>
+                <div class="app-icon" onclick="App.open('cards')"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg><span>字卡库</span></div>
+                <div class="app-icon" onclick="App.open('mailbox')"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg><span>信箱</span></div>
+                <div class="app-icon" onclick="App.open('space')"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg><span>空间</span></div>
+                <div class="app-icon" onclick="App.open('music')"><svg viewBox="0 0 24 24" style="fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round;"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg><span>网易云</span></div>
+                <div class="app-icon" onclick="App.open('games')"><svg viewBox="0 0 24 24"><path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4-3c-.83 0-1.5-.67-1.5-1.5S18.67 9 19.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg><span>小游戏</span></div>
+                <div class="app-icon" onclick="App.open('beauty')"><svg viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zm0 16c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7zm1-11h-2v3H8v2h3v3h2v-3h3v-2h-3V8z"/></svg><span>美化</span></div>
+                <div class="app-icon" onclick="App.open('settings')"><svg viewBox="0 0 24 24"><path d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.06-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61 l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41 h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.59,8.12,5.92,7.63,6.29L5.24,5.33c-0.22-0.08-0.47,0-0.59,0.22L2.73,8.87 C2.62,9.08,2.66,9.34,2.86,9.48l2.03,1.58C4.84,11.36,4.8,11.69,4.8,12s0.02,0.64,0.06,0.94l-2.03,1.58 c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54 c0.05,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96 c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.49-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6 s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z"/></svg><span>系统设置</span></div>
             </div>
         </div>
 
@@ -732,10 +690,6 @@ textarea{width:100%;height:120px;margin-top:10px;padding:10px;font-family:var(--
         <div class="game-card">
             <div class="game-info"><div class="game-title">UNO</div><div class="game-desc">欢乐纸牌，颜色数字</div></div>
             <button class="game-btn" onclick="Games.invite('uno')">发起邀请</button>
-        </div>
-        <div class="game-card">
-            <div class="game-info"><div class="game-title">骗子酒馆 🥃</div><div class="game-desc">吹牛纸牌博弈，左轮轮盘赌命</div></div>
-            <button class="game-btn" onclick="Games.invite('liars')">发起邀请</button>
         </div>
     </div>
 </div>
@@ -897,13 +851,6 @@ textarea{width:100%;height:120px;margin-top:10px;padding:10px;font-family:var(--
                     <button class="beauty-btn clear" onclick="Beauty.clearBg('music')">清除</button>
                 </div>
                 <input type="file" id="music-bg-file" accept="image/*" style="display:none;" onchange="Beauty.uploadBg(event, 'music')">
-            </div>
-
-            <div class="beauty-card">
-                <div class="beauty-card-title">App 图标替换</div>
-                <div style="font-size:12px; color:var(--sub); margin-bottom:8px;">为桌面上的所有应用自定义图标，选择图片后自动裁剪为圆角方块</div>
-                <div id="icon-replace-list"></div>
-                <input type="file" id="icon-replace-file" accept="image/*" style="display:none;" onchange="Beauty.uploadIcon(event)">
             </div>
         </div>
     </div>
@@ -1218,14 +1165,7 @@ const DEFAULT_SPACE_PROFILE = {
 };
 
 // ===== 美化 App 逻辑 =====
-// 桌面 App 图标注册表: id -> 名称
-const APP_ICONS = {
-    chat: '对话', cards: '字卡库', mailbox: '信箱', space: '空间',
-    music: '网易云', games: '小游戏', beauty: '美化', settings: '系统设置'
-};
-
 const Beauty = {
-    _editingIconApp: null,
     setBubbleStyle(style) {
         document.body.setAttribute('data-bubble-style', style);
         Data.db.settings.bubbleStyle = style;
@@ -1356,97 +1296,6 @@ const Beauty = {
         document.getElementById('beauty-lock-sub').value = Data.db.settings.lockPlayerSub || '';
         document.getElementById('lock-player-title-text').innerText = Data.db.settings.lockPlayerTitle || '马上播放';
         document.getElementById('lock-player-sub').innerText = Data.db.settings.lockPlayerSub || '忘记他需要多久';
-
-        // 应用自定义 App 图标并渲染管理列表
-        try { this.applyIcons(); } catch(e) {}
-        try { this.renderIconList(); } catch(e) {}
-    },
-    // ===== App 图标替换 =====
-    renderIconList() {
-        const list = document.getElementById('icon-replace-list');
-        if (!list) return;
-        const icons = Data.db.settings.appIcons || {};
-        list.innerHTML = Object.keys(APP_ICONS).map(id => {
-            const custom = icons[id];
-            const preview = custom
-                ? `<img src="${custom}">`
-                : `<svg viewBox="0 0 24 24">${(document.querySelector(`.app-icon[data-app="${id}"] svg`) || {}).innerHTML || ''}</svg>`;
-            return `
-                <div class="icon-row">
-                    <div class="icon-preview">${preview}</div>
-                    <div class="icon-name">${APP_ICONS[id]}</div>
-                    <div class="icon-ops">
-                        <button class="icon-mini-btn" onclick="Beauty.pickIcon('${id}')">更换</button>
-                        <button class="icon-mini-btn" onclick="Beauty.resetIcon('${id}')" ${custom ? '' : 'disabled style="opacity:0.4;"'}>恢复</button>
-                    </div>
-                </div>`;
-        }).join('');
-    },
-    pickIcon(appId) {
-        this._editingIconApp = appId;
-        document.getElementById('icon-replace-file').click();
-    },
-    uploadIcon(e) {
-        const appId = this._editingIconApp;
-        const f = e.target.files[0];
-        if (!appId || !f) return;
-        const r = new FileReader();
-        r.onload = (ev) => {
-            const img = new Image();
-            img.onload = () => {
-                try {
-                    const cv = document.createElement('canvas');
-                    const size = 128;
-                    // 居中裁剪为正方形
-                    const side = Math.min(img.width, img.height);
-                    cv.width = size; cv.height = size;
-                    const ctx = cv.getContext('2d');
-                    ctx.drawImage(img, (img.width - side) / 2, (img.height - side) / 2, side, side, 0, 0, size, size);
-                    const base64 = cv.toDataURL('image/png');
-                    if (!Data.db.settings.appIcons) Data.db.settings.appIcons = {};
-                    Data.db.settings.appIcons[appId] = base64;
-                    Data.save();
-                    this.applyIcons();
-                    this.renderIconList();
-                    alert('图标已更新');
-                } catch(err) { alert('图片处理失败'); }
-            };
-            img.src = ev.target.result;
-        };
-        r.readAsDataURL(f);
-        e.target.value = '';
-    },
-    resetIcon(appId) {
-        if (!Data.db.settings.appIcons) return;
-        delete Data.db.settings.appIcons[appId];
-        Data.save();
-        this.applyIcons();
-        this.renderIconList();
-    },
-    applyIcons() {
-        if (!this._origSvg) this._origSvg = {};
-        const icons = (Data.db && Data.db.settings && Data.db.settings.appIcons) || {};
-        document.querySelectorAll('.app-icon[data-app]').forEach(el => {
-            const id = el.getAttribute('data-app');
-            let svg = el.querySelector('svg');
-            const img = el.querySelector('img.icon-custom');
-            // 首次缓存原始 SVG，便于恢复默认
-            if (svg && !this._origSvg[id]) this._origSvg[id] = svg.outerHTML;
-            if (icons[id]) {
-                if (!img) {
-                    const im = document.createElement('img');
-                    im.className = 'icon-custom';
-                    im.src = icons[id];
-                    if (svg) el.replaceChild(im, svg); else el.insertBefore(im, el.querySelector('span'));
-                } else {
-                    img.src = icons[id];
-                }
-            } else if (!svg && img && this._origSvg[id]) {
-                const tpl = document.createElement('template');
-                tpl.innerHTML = this._origSvg[id].trim();
-                el.replaceChild(tpl.content.firstChild, img);
-            }
-        });
     }
 };
 
@@ -1563,8 +1412,7 @@ const Games = {
     },
     invite(game) {
         this.currentGame = game;
-        const gameNames = { gomoku: '五子棋', uno: 'UNO', liars: '骗子酒馆' };
-        const gameName = gameNames[game] || '游戏';
+        const gameName = game === 'gomoku' ? '五子棋' : 'UNO';
         
         document.getElementById('game-invite-title').innerText = '向对方发起' + gameName + '邀请';
         document.getElementById('gi-avatar-me').src = Data.db.avatars.me || DEFAULT_AV;
@@ -1578,13 +1426,19 @@ const Games = {
         document.getElementById('game-invite-modal').classList.add('show');
         
         clearTimeout(this.inviteTimer);
-        // 发起后对方秒同意，直接进入游戏
         this.inviteTimer = setTimeout(() => {
+            const accepted = Math.random() < 0.7;
             const textEl = document.getElementById('game-invite-text');
-            textEl.innerText = '对方同意了邀请！这就开始！';
-            textEl.style.color = '#07c160';
-            this.startGame();
-        }, 800);
+            if (accepted) {
+                textEl.innerText = '对方同意了邀请！一起开始玩吧！';
+                textEl.style.color = '#07c160';
+                actions.innerHTML = `<button class="btn-lg b-dark" style="margin-top:0; background:#07c160; border-color:#07c160;" onclick="Games.startGame()">开始游戏</button>`;
+            } else {
+                textEl.innerText = '对方拒绝了你的邀请 😢';
+                textEl.style.color = '#ff3b30';
+                actions.innerHTML = `<button class="btn-lg b-out" style="margin-top:0;" onclick="Games.cancelInvite()">关闭</button>`;
+            }
+        }, 2000 + Math.random() * 2000);
     },
     cancelInvite() {
         clearTimeout(this.inviteTimer);
@@ -1600,9 +1454,6 @@ const Games = {
         if (this.currentGame === 'gomoku') {
             titleEl.innerText = '五子棋';
             this.initGomoku(area);
-        } else if (this.currentGame === 'liars') {
-            titleEl.innerText = '骗子酒馆';
-            this.initLiars(area);
         } else {
             titleEl.innerText = 'UNO';
             this.initUno(area);
@@ -1829,221 +1680,10 @@ const Games = {
         document.getElementById('uno-status').innerText = '你的回合';
         document.getElementById('uno-status').style.color = '#4cd964';
     },
-
-    // 骗子酒馆 (Liar's Bar) 逻辑
-    LIAR_NAMES: { Q: 'Q', A: 'A', K: 'K', J: '王' },
-    initLiars(area) {
-        this.gameState = {
-            round: 1,
-            deck: [],
-            myHand: [],
-            otherHand: [],
-            tableCard: 'Q',      // 本轮桌牌
-            tablePlayed: [],     // 对方扣在桌上的牌
-            mySelection: [],     // 我选中的手牌索引
-            lastPlayBy: null,    // 'me' | 'other' 最近扣牌者
-            myLastPlay: [],      // 我最近扣下的牌(用于被质疑时翻牌)
-            chambers: 0,         // 已扣扳机次数
-            bulletChamber: 1 + Math.floor(Math.random() * 6),
-            isGameOver: false
-        };
-        area.innerHTML = `
-            <div class="liar-container">
-                <div class="liar-bar-header">
-                    <span>🍺 第 <span id="liar-round">1</span> 局</span>
-                    <span class="liar-round-tag">对方手牌: <span id="liar-other-count">5</span> 张</span>
-                </div>
-                <div class="liar-table-card">
-                    <div class="t-label">本轮桌牌 · 必须声称打出的牌</div>
-                    <div class="t-value" id="liar-table-card">Q</div>
-                </div>
-                <div class="liar-status" id="liar-status">你的回合</div>
-                <div style="font-size:11px; color:#8a7350; text-align:center;">对方最近扣下的牌（跟牌压过 或 质疑验牌）</div>
-                <div class="liar-facezone" id="liar-table-zone"></div>
-                <div class="liar-revolver">
-                    <span class="rev-label">🔫 左轮</span>
-                    <div id="liar-chambers" style="display:flex; gap:6px;"></div>
-                </div>
-                <div class="liar-hand-title">我的手牌（点选 1~3 张一起扣出）</div>
-                <div class="liar-hand" id="liar-my-hand"></div>
-                <div class="liar-log" id="liar-log"></div>
-                <div class="liar-actions">
-                    <button class="liar-btn play" id="liar-btn-play" onclick="Games.liarsPlay()">扣牌打出</button>
-                    <button class="liar-btn challenge" id="liar-btn-challenge" onclick="Games.liarsChallenge()" disabled>质疑 🤨</button>
-                </div>
-            </div>
-        `;
-        this.liarsNewRound(true);
-    },
-    liarsNewRound(first) {
-        const g = this.gameState;
-        // 牌堆: Q×6 A×6 K×6 王×2
-        const pool = ['Q','Q','Q','Q','Q','Q','A','A','A','A','A','A','K','K','K','K','K','K','J','J'];
-        g.deck = pool.sort(() => Math.random() - 0.5);
-        g.myHand = g.deck.splice(0, 5).sort();
-        g.otherHand = g.deck.splice(0, 5);
-        g.tablePlayed = [];
-        g.mySelection = [];
-        g.lastPlayBy = null;
-        g.myLastPlay = [];
-        g.tableCard = ['Q','A','K'][Math.floor(Math.random() * 3)];
-        document.getElementById('liar-round').innerText = g.round;
-        document.getElementById('liar-table-card').innerText = g.tableCard;
-        document.getElementById('liar-other-count').innerText = g.otherHand.length;
-        document.getElementById('liar-status').innerText = '你的回合';
-        document.getElementById('liar-status').style.color = '#f0d9a8';
-        this.liarsRender();
-        if (!first) this.liarsLog(`—— 第 ${g.round} 局开始，桌牌是「${g.tableCard}」——`);
-    },
-    liarsRender() {
-        const g = this.gameState;
-        // 桌上扣牌
-        const zone = document.getElementById('liar-table-zone');
-        if (zone) {
-            zone.innerHTML = g.tablePlayed.length
-                ? g.tablePlayed.map(c => `<div class="liar-card-back">🂠</div>`).join('')
-                : `<div style="font-size:12px; color:#6b5a3e;">空空如也</div>`;
-        }
-        // 左轮
-        const ch = document.getElementById('liar-chambers');
-        if (ch) {
-            let html = '';
-            for (let i = 1; i <= 6; i++) {
-                let cls = 'liar-chamber';
-                if (i <= g.chambers) cls += ' used';
-                if (i === g.bulletChamber && g.chambers < i) cls += ' deadly';
-                html += `<div class="${cls}"></div>`;
-            }
-            ch.innerHTML = html;
-        }
-        // 我的手牌
-        const hand = document.getElementById('liar-my-hand');
-        if (hand) {
-            hand.innerHTML = g.myHand.map((c, i) => `
-                <div class="liar-my-card ${c === 'J' ? 'joker' : ''} ${g.mySelection.includes(i) ? 'selected' : ''}" onclick="Games.liarsSelect(${i})">
-                    ${this.LIAR_NAMES[c] || c}${c === 'J' ? '<small>万能</small>' : ''}
-                </div>`).join('');
-        }
-        const canChallenge = g.lastPlayBy === 'other' && g.tablePlayed.length > 0;
-        const btnPlay = document.getElementById('liar-btn-play');
-        const btnCh = document.getElementById('liar-btn-challenge');
-        if (btnPlay) btnPlay.disabled = g.isGameOver || g.mySelection.length === 0;
-        if (btnCh) btnCh.disabled = !canChallenge;
-    },
-    liarsSelect(i) {
-        const g = this.gameState;
-        if (g.isGameOver) return;
-        const pos = g.mySelection.indexOf(i);
-        if (pos >= 0) g.mySelection.splice(pos, 1);
-        else { if (g.mySelection.length >= 3) { this.liarsLog('一次最多扣 3 张牌！'); return; } g.mySelection.push(i); }
-        this.liarsRender();
-    },
-    liarsPlay() {
-        const g = this.gameState;
-        if (g.isGameOver || g.mySelection.length === 0) return;
-        const played = g.mySelection.map(i => g.myHand[i]).sort();
-        g.myHand = g.myHand.filter((_, i) => !g.mySelection.includes(i));
-        g.mySelection = [];
-        g.myLastPlay = played;
-        g.tablePlayed = played;   // 桌面牌堆始终显示最近一次扣下的牌
-        g.lastPlayBy = 'me';
-        this.liarsLog(`你扣下了 ${played.length} 张牌，声称都是「${g.tableCard}」…`);
-        document.getElementById('liar-status').innerText = '对方思考中...';
-        document.getElementById('liar-status').style.color = '#a5854e';
-        this.liarsRender();
-        setTimeout(() => this.liarsOtherTurn(), 1200);
-    },
-    liarsOtherTurn() {
-        const g = this.gameState;
-        if (g.isGameOver) return;
-        // 对方决策: 质疑我的牌 or 也扣牌
-        let challenged = false;
-        if (g.lastPlayBy === 'me') {
-            // 我方实牌真值越高，越不容易被质疑；对方没牌时必须质疑
-            const truths = g.myLastPlay.filter(c => c === g.tableCard || c === 'J').length;
-            const bluffRatio = 1 - truths / g.myLastPlay.length;
-            challenged = g.otherHand.length === 0 ? true : Math.random() < 0.25 + bluffRatio * 0.5;
-        }
-        if (challenged) {
-            this.liarsLog('对方拍桌而起：「骗子！」质疑你的牌！');
-            setTimeout(() => this.liarsResolveChallenge(), 1000);
-            return;
-        }
-        // 对方扣牌 1~3 张
-        const n = Math.min(1 + Math.floor(Math.random() * 3), g.otherHand.length);
-        const played = g.otherHand.splice(0, n);
-        g.tablePlayed = played;
-        g.lastPlayBy = 'other';
-        document.getElementById('liar-other-count').innerText = g.otherHand.length;
-        this.liarsLog(`对方扣下了 ${n} 张牌，声称都是「${g.tableCard}」。`);
-        // 我没牌了必须质疑
-        if (g.myHand.length === 0) {
-            document.getElementById('liar-status').innerText = '你已无牌，必须质疑！';
-            document.getElementById('liar-status').style.color = '#ff6b5e';
-            this.liarsRender();
-            return;
-        }
-        document.getElementById('liar-status').innerText = '你的回合：跟牌 or 质疑';
-        document.getElementById('liar-status').style.color = '#f0d9a8';
-        this.liarsRender();
-    },
-    liarsChallenge() {
-        const g = this.gameState;
-        if (g.lastPlayBy !== 'other' || g.tablePlayed.length === 0 || g.isGameOver) return;
-        this.liarsLog('你猛拍桌子：「骗子！」翻开对方的牌——');
-        document.getElementById('liar-status').innerText = '验牌中...';
-        document.getElementById('liar-status').style.color = '#a5854e';
-        setTimeout(() => this.liarsResolveChallenge(), 1000);
-    },
-    liarsResolveChallenge() {
-        const g = this.gameState;
-        const liarCandidate = g.lastPlayBy;                  // 最近扣牌者接受验牌
-        const challenger = liarCandidate === 'me' ? 'other' : 'me';
-        const cards = liarCandidate === 'me' ? g.myLastPlay : g.tablePlayed;
-        // 翻牌动画
-        const zone = document.getElementById('liar-table-zone');
-        if (zone) {
-            zone.innerHTML = cards.map(c => `<div class="liar-card-back revealed">${this.LIAR_NAMES[c] || c}</div>`).join('');
-        }
-        const isLiar = cards.some(c => c !== g.tableCard && c !== 'J');
-        const loser = isLiar ? liarCandidate : challenger;
-        setTimeout(() => {
-            if (isLiar) this.liarsLog(`验牌结果：有假牌！「${loser === 'me' ? '你' : '对方'}」说谎了，扣下扳机吧 🔫`);
-            else this.liarsLog(`验牌结果：全是真的！质疑失败，「${loser === 'me' ? '你' : '对方'}」扣扳机 🔫`);
-            setTimeout(() => this.liarsPullTrigger(loser), 1200);
-        }, 800);
-    },
-    liarsPullTrigger(loser) {
-        const g = this.gameState;
-        g.chambers++;
-        const died = g.chambers >= g.bulletChamber;
-        this.liarsRender();
-        if (died) {
-            g.isGameOver = true;
-            const win = loser === 'other';
-            document.getElementById('liar-status').innerText = win ? '砰！对方倒下了，你活了下来 🍺' : '砰！！你倒下了… 🕯️';
-            document.getElementById('liar-status').style.color = win ? '#4cd964' : '#ff3b30';
-            document.getElementById('liar-btn-play').disabled = true;
-            document.getElementById('liar-btn-challenge').disabled = true;
-            this.liarsLog(win ? '死里逃生。酒馆里响起掌声。' : '左轮没有留情。愿赌服输。');
-            return;
-        }
-        this.liarsLog(`咔哒——空枪。还剩 ${6 - g.chambers} 次机会。`);
-        setTimeout(() => {
-            g.round++;
-            this.liarsNewRound(false);
-        }, 1500);
-    },
-    liarsLog(text) {
-        const el = document.getElementById('liar-log');
-        if (el) el.innerText = text;
-    },
     
     receiveInvite() {
-        const gamePool = ['gomoku', 'uno', 'liars'];
-        const game = gamePool[Math.floor(Math.random() * gamePool.length)];
-        const gameNames = { gomoku: '五子棋', uno: 'UNO', liars: '骗子酒馆' };
-        const gameName = gameNames[game];
+        const game = Math.random() < 0.5 ? 'gomoku' : 'uno';
+        const gameName = game === 'gomoku' ? '五子棋' : 'UNO';
         
         document.getElementById('game-invite-title').innerText = '收到' + gameName + '邀请';
         document.getElementById('gi-avatar-me').src = Data.db.avatars.me || DEFAULT_AV;
@@ -2085,8 +1725,7 @@ const Data = {
                 transMeaningful: "520,1314",
                 transMin: 1, transMax: 200, autoCombo: false, autoComboRate: 30,
                 lockPlayerTitle: "马上播放",
-                lockPlayerSub: "忘记他需要多久",
-                appIcons: {}
+                lockPlayerSub: "忘记他需要多久"
             },
             space: { profile: JSON.parse(JSON.stringify(DEFAULT_SPACE_PROFILE)), posts: [], widget: { title: 'Fall in love', startDate: null } }
         };
@@ -2197,7 +1836,7 @@ const Data = {
 const App = {
     open(n) {
         try {
-            const el = document.getElementById('app-' + n) || document.getElementById(n);
+            const el = document.getElementById('app-' + n);
             if (el) el.classList.add('active');
             if (n === 'mailbox') Mailbox.updateVisualState();
             if (n === 'space') Space.onOpen();
@@ -2208,7 +1847,7 @@ const App = {
     },
     close(n) {
         try {
-            const el = document.getElementById('app-' + n) || document.getElementById(n);
+            const el = document.getElementById('app-' + n);
             if (el) el.classList.remove('active');
             const door = document.getElementById('mb-door');
             if (door) door.classList.remove('open');
